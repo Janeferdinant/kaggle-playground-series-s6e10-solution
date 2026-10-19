@@ -1,0 +1,116 @@
+{
+  "competition": "playground-series-s6e10",
+  "metric": "roc_auc",
+  "best_experiment": "exp_04_aco_ensemble",
+  "best_auc": 0.86153,
+  "experiments": [
+    {
+      "id": "exp_01_gbdt_baseline",
+      "name": "Hist-GBDT (All Features)",
+      "features_count": 28,
+      "mean_auc": 0.85766,
+      "std_auc": 0.01203,
+      "accuracy": 0.8104,
+      "f1": 0.87258,
+      "log_loss": 0.41332
+    },
+    {
+      "id": "exp_02_rf_baseline",
+      "name": "Random Forest (All Features)",
+      "features_count": 28,
+      "mean_auc": 0.85398,
+      "std_auc": 0.01019,
+      "accuracy": 0.8,
+      "f1": 0.87173,
+      "log_loss": 0.43178
+    },
+    {
+      "id": "exp_03_aco_gbdt",
+      "name": "Hist-GBDT (ACO Feature Subset)",
+      "features_count": 25,
+      "selected_features": [
+        "Gender",
+        "Customer Type",
+        "Type of Travel",
+        "Class",
+        "Inflight wifi service",
+        "Departure/Arrival time convenient",
+        "Ease of Online booking",
+        "Gate location",
+        "Food and drink",
+        "Online boarding",
+        "Seat comfort",
+        "Inflight entertainment",
+        "On-board service",
+        "Leg room service",
+        "Baggage handling",
+        "Checkin service",
+        "Inflight service",
+        "Departure Delay in Minutes",
+        "Arrival Delay in Minutes",
+        "total_delay",
+        "delay_ratio",
+        "mean_service_rating",
+        "service_variance",
+        "dissatisfied_count",
+        "delighted_count"
+      ],
+      "mean_auc": 0.8579,
+      "std_auc": 0.01174,
+      "accuracy": 0.8108,
+      "f1": 0.8723,
+      "log_loss": 0.4135
+    },
+    {
+      "id": "exp_04_aco_ensemble",
+      "name": "ACO Optimal Ensemble Blend",
+      "weights": [
+        0.2816,
+        0.4267,
+        0.2917
+      ],
+      "models_in_blend": [
+        "Hist-GBDT (Full)",
+        "Random Forest",
+        "Hist-GBDT (ACO Subset)"
+      ],
+      "mean_auc": 0.86153,
+      "std_auc": 0.001,
+      "accuracy": 0.8118,
+      "f1": 0.87531,
+      "log_loss": 0.40735
+    }
+  ],
+  "aco_feature_subset": [
+    "Gender",
+    "Customer Type",
+    "Type of Travel",
+    "Class",
+    "Inflight wifi service",
+    "Departure/Arrival time convenient",
+    "Ease of Online booking",
+    "Gate location",
+    "Food and drink",
+    "Online boarding",
+    "Seat comfort",
+    "Inflight entertainment",
+    "On-board service",
+    "Leg room service",
+    "Baggage handling",
+    "Checkin service",
+    "Inflight service",
+    "Departure Delay in Minutes",
+    "Arrival Delay in Minutes",
+    "total_delay",
+    "delay_ratio",
+    "mean_service_rating",
+    "service_variance",
+    "dissatisfied_count",
+    "delighted_count"
+  ],
+  "aco_ensemble_weights": [
+    0.2816,
+    0.4267,
+    0.2917
+  ]
+}

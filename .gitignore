@@ -1,0 +1,41 @@
+# Environments & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+kaggle.json
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data and Artifacts
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+models/*.bin
+models/*.pkl
+models/*.pt
+models/*.onnx
+!models/README.md
+submissions/*.csv
+!submissions/README.md
+!submissions/sample_submission.csv
+
+# Logs & Jupyter
+*.log
+.ipynb_checkpoints
+.pytest_cache/
+.coverage
+htmlcov/
+.superpowers/
+
+# Node / Web
+node_modules/
+.next/
+out/
+dist/
+build/

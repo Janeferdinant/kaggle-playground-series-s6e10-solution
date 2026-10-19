@@ -1,0 +1,46 @@
+{
+  "is_valid": true,
+  "row_count": 1500,
+  "columns": [
+    "id",
+    "satisfaction"
+  ],
+  "checks": [
+    {
+      "check": "file_exists_and_csv",
+      "passed": true
+    },
+    {
+      "check": "row_count_match",
+      "passed": true,
+      "expected": 1500,
+      "actual": 1500
+    },
+    {
+      "check": "column_names_and_order",
+      "passed": true,
+      "expected": [
+        "id",
+        "satisfaction"
+      ],
+      "actual": [
+        "id",
+        "satisfaction"
+      ]
+    },
+    {
+      "check": "id_alignment",
+      "passed": true
+    },
+    {
+      "check": "no_missing_values",
+      "passed": true,
+      "null_count": 0
+    },
+    {
+      "check": "categorical_labels_valid",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
